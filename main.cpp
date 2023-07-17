@@ -1,6 +1,8 @@
 #include "DataStructre.h"
 using namespace std;
 int main() {
-    StackTest();
+    //StackTest();
+    //QueueTest();
+    ListTest();
     return 0;
 }

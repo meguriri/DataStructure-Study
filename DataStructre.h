@@ -6,5 +6,7 @@
 #define DATASTRUCTURE_DATASTRUCTRE_H
 
 #include "Stack/Stack.h"
+#include "Queue/Queue.h"
+#include "List/List.h"
 
 #endif //DATASTRUCTURE_DATASTRUCTRE_H
