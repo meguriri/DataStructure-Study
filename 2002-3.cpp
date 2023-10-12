@@ -6,7 +6,7 @@
 
 #include<cstdio>
 #include<cstdlib>
-int k=0;
+
 typedef struct node{
   char c;
   node *l,*r;
