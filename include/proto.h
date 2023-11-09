@@ -5,5 +5,6 @@
 #include<cstdlib>
 #include<cstring>
 #include<cmath>
+#define N 100
 
 #endif
