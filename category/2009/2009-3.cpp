@@ -14,7 +14,7 @@ void preOrderTraversal(bitTree t){
   if(t==nullptr){
     return;
   }
-  printf("%c ",t->d);
+  printf("%d ",t->d);
   preOrderTraversal(t->l);
   preOrderTraversal(t->r);
 }

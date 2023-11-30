@@ -3,35 +3,36 @@
   1 2 3 -1 -1 4 -1 -1 5 6 -1 -1 7 -1 -1
 */
 
-#include<cstdio>
-#include<cstdlib>
+#include"bitTree.h"
+// #include<cstdio>
+// #include<cstdlib>
 
-typedef struct node{
-  int d;
-  node *l,*r;
-}bitNode,*bitTree;
+// typedef struct node{
+//   int d;
+//   node *l,*r;
+// }bitNode,*bitTree;
 
-bitTree creatBitTree(){
-  bitNode *t=new(node);
-  int x;
-  scanf("%d",&x);
-  if(x==-1){
-    return nullptr;
-  }
-  t->d=x;
-  t->l=creatBitTree();
-  t->r=creatBitTree();
-  return t;
-}
+// bitTree creatBitTree(){
+//   bitNode *t=new(node);
+//   int x;
+//   scanf("%d",&x);
+//   if(x==-1){
+//     return nullptr;
+//   }
+//   t->d=x;
+//   t->l=creatBitTree();
+//   t->r=creatBitTree();
+//   return t;
+// }
 
-void preOrderTraversal(bitTree t){
-  if(t==nullptr){
-    return;
-  }
-  printf("%d ",t->d);
-  preOrderTraversal(t->l);
-  preOrderTraversal(t->r);
-}
+// void preOrderTraversal(bitTree t){
+//   if(t==nullptr){
+//     return;
+//   }
+//   printf("%d ",t->d);
+//   preOrderTraversal(t->l);
+//   preOrderTraversal(t->r);
+// }
 
 void swapChildren(bitTree &t){
   if(t==nullptr){

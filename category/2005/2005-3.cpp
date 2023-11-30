@@ -17,7 +17,7 @@ bitTree creatBitTree(){
   bitNode *t=new(node);
   int x;
   scanf("%d",&x);
-  if(x==-1){
+  if(x=='!'){
     return nullptr;
   }
   t->d=x;
