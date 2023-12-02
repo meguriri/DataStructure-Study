@@ -1,6 +1,6 @@
 #include"bstTree.h"
 
-void insertBstNode(bstTree &t,float x){
+void insertBstNode(bstTree &t,int x){
   if(t==nullptr){
     t=new(bstNode);
     t->d=x; 
@@ -13,10 +13,12 @@ void insertBstNode(bstTree &t,float x){
   }
 }
 
-bstTree creatBstTree(float a[],float n){
+bstTree creatBstTree(int n){
   bstTree t=nullptr;
   for(int i=0;i<n;i++){
-    insertBstNode(t,a[i]);
+    int num;
+    scanf("%d",&num);
+    insertBstNode(t,num);
   }
   return t;
 }
@@ -26,6 +28,6 @@ void inOrderTraversal(bstTree t){
     return;
   }
   inOrderTraversal(t->l);
-  printf("%.2lf ",t->d);
+  printf("%d ",t->d);
   inOrderTraversal(t->r);
 }

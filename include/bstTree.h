@@ -3,12 +3,12 @@
 #include"proto.h"
 
 typedef struct node{
-  float d;
+  int d;
   node *l,*r;
 }bstNode,*bstTree;
 
-bstTree creatBstTree(float [],float);
-void insertBstNode(bstTree&,float);
+bstTree creatBstTree(int n);
+void insertBstNode(bstTree&,int);
 void inOrderTraversal(bstTree);
 
 #endif
