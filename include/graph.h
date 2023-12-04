@@ -4,6 +4,7 @@
 
 typedef struct ArcNode{
   int v;
+  int w;
   ArcNode *next;
 }ArcNode;
 
