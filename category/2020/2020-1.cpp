@@ -5,32 +5,37 @@
       3
   eg2. 1 2 3 4 5 6 7
       8
+  eg3. 1 2 3 4 5 6 7
+      7
 */
-
 #include"list.h"
 
-bool getListM(list l,int m){
-  node *pre,*p=l->next;
+int getListM(list head,int m){
+  node *p=head->next,*pre=nullptr;
   int cnt=0;
   while(p!=nullptr){
-    cnt++;
-    if(cnt==m+1){
-      pre=l->next;
+    if(cnt==m){
+      pre=head->next;
     }
-    if(cnt>=m+1){
+    if(pre!=nullptr){
       pre=pre->next;
     }
     p=p->next;
+    cnt++;
   }
-  if(pre==nullptr)
-    return false;
-  printf("%d\n",pre->d);
-  return true;
+  if(pre!=nullptr){
+    printf("%d\n",pre->d);
+    return 1;
+  }else if(cnt==m){
+    printf("%d\n",head->next->d);
+    return 1;
+  }
+  return 0;
 }
 
 int main(){
   int a[7]={1,2,3,4,5,6,7};
   list l=creatList(a,7);
-  printf("%d\n",getListM(l,3));
+  printf("%d\n",getListM(l,8));
   return 0;
 }
