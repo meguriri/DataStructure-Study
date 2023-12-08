@@ -1,27 +1,25 @@
 #include"list.h"
 
 void bubbleSort(list l){
-  node *p,*pre;
-  int f=1;
-  while(f!=0){
-    pre=l->next;
-    p=pre->next;
+  int f=0;
+  while(1){
     f=0;
-    while(p!=nullptr){
-      if(p->d<pre->d){
+    for(node *p=l->next;p->next!=nullptr;p=p->next){
+      if(p->d>p->next->d){
         int t=p->d;
-        p->d=pre->d;
-        pre->d=t;
+        p->d=p->next->d;
+        p->next->d=t;
         f++;
       }
-      p=p->next;
-      pre=pre->next;
+    }
+    if(f==0){
+      break;
     }
   }
 }
 
 int main(){
-  int a[10]={6,2,8,5,3,0,9,4,1,7};
+  int a[10]={9,2,1,4,3,5,8,7,6,0};
   list l=creatList(a,10);
   printList(l);
   bubbleSort(l);
