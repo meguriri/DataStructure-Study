@@ -9,5 +9,6 @@ typedef struct node{
 
 list creatList(int [],int);
 void printList(list);
-
+list creastCirList(int [],int);
+void printCirList(list);
 #endif
